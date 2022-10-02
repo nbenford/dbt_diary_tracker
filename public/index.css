@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+
+body {
+  font-family: Montserrat;
+}
+
+.stella_title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3rem;
+}
+
+.app {
+  position: absolute;
+  top: 83px;
+  width: 99vw;
+}
+@media (max-width: 400px) {
+  .app {
+    top: 100px;
+  }
+}
+
+/************************ PAGE NOT FOUND ************************/
+.pageNotFound {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageNotFound p {
+  text-align: center;
+}
+
+/************************ Footer ************************/
+.checkout {
+  margin-left: 50px;
+}
+
+.githubIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.githubIcon a {
+  font-size: 50px;
+  text-decoration: none;
+  color: #888;
+}
+.githubIcon a svg {
+  font-size: 4rem;
+}
+.githubIcon a:hover {
+  color: #4f4f4f;
+}
+.copyright {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+footer > div {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 200px;
+}
+
+footer img {
+  width: 200px;
+}
+
+@media (max-width: 620px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-bewteen;
+  }
+}
