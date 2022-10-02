@@ -1,4 +1,4 @@
-<h1>Stella/h1>
+<h1>Stella</h1>
 
 Welcome to Stella DBT Tracker
 
