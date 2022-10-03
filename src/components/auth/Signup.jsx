@@ -60,6 +60,10 @@ const SignupSchema = Yup.object().shape({
   email: Yup.string()
     .trim()
     .email('Invalid email')
+    .matches(
+      /(?!.*[\.\-\_]{2,})^[a-zA-Z0-9\.\-\_]{3,24}$/gm,
+      'Alphanumeric and dot, underscore, and dash'
+    )
     .required('Required')
     .test(
       'Unique Email',
