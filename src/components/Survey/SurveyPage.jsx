@@ -1,12 +1,13 @@
 import React from 'react';
 import { Model, StylesManager } from 'survey-core';
 import { Survey } from 'survey-react-ui';
-import 'survey-core/defaultV2.css';
+import 'survey-core/modern.css';
+import 'survey-react/survey.css';
 import { fetchSurveys } from '../../reducers/Survey/surveyReducer.js';
 import { submitSurvey } from '../../reducers/Survey/surveyReducer.js';
 import surveyJSON from '../../data/survey_json.js';
 import { useDispatch, useSelector } from 'react-redux';
-StylesManager.applyTheme('defaultV2');
+StylesManager.applyTheme('modern');
 
 function onValueChanged(_, options) {
   console.log('New value: ' + options.value);

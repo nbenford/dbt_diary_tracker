@@ -71,8 +71,6 @@ export function LineGraphs(props) {
 
   props.surveys.map((survey) => {
     const newDate = new Date(survey.createdAt);
-    console.log('labeys! ', newDate.getMonth());
-
     const dateString = newDate.getMonth() + 1 + '/' + newDate.getDate();
     labels.push(dateString);
   });
