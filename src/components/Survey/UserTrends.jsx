@@ -42,6 +42,9 @@ export default function UserTrends() {
       <h1 className="d-flex mx-auto justify-content-center">
         {user.fName}'s DBT Diary Trends
       </h1>
+      <h3 className="d-flex mx-auto justify-content-center">
+        The dashed line represents the trend.
+      </h3>
       {surveys.length > 1 ? (
         graphNames.map((graphName, index) => (
           <LineGraphs

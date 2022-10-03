@@ -36,8 +36,11 @@ const SignupSchema = Yup.object().shape({
   username: Yup.string()
     .trim()
     .min(5, 'Too Short!')
-    .max(25, 'Too Long!')
-    .lowercase()
+    .max(30, 'Too Long!')
+    .matches(
+      /(?!.*[\.\-\_]{2,})^[a-zA-Z0-9\.\-\_]{3,24}$/gm,
+      'Alphanumeric and dot, underscore, and dash'
+    )
     .required('Required')
     .test(
       'Unique Username',
@@ -84,8 +87,8 @@ const SignupSchema = Yup.object().shape({
 const LoginSchema = Yup.object().shape({
   username: Yup.string()
     .trim()
-    .min(5, 'Too Shorty!')
-    .max(25, 'Too Long!')
+    .min(5, 'Too Short!')
+    .max(15, 'Too Long!')
     .required('Required'),
   password: Yup.string()
     .trim()

@@ -12,6 +12,7 @@ import {
   SurveyPage,
   SignIn,
   UserTrends,
+  SurveyCompleted,
 } from './index';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -62,6 +63,7 @@ function App() {
         <Route path={'/surveyPage'} element={<SurveyPage />} />
         <Route path={'/signup'} element={<Signup />} />
         <Route path={'/userTrends'} element={<UserTrends />} />
+        <Route path={'/surveyCompleted'} element={<SurveyCompleted />} />
         <Route path={'*'} element={<PageNotFound />} />
       </Routes>
       <footer className="my-5 pt-5 text-muted text-center text-small">

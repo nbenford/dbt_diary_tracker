@@ -9,3 +9,5 @@ export { default as Signup } from './auth/Signup';
 export { default as SignIn } from './SignIn';
 
 export { default as UserTrends } from './Survey/UserTrends';
+
+export { default as SurveyCompleted } from './Survey/SurveyCompleted';

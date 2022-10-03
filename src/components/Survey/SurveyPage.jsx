@@ -7,6 +7,8 @@ import { fetchSurveys } from '../../reducers/Survey/surveyReducer.js';
 import { submitSurvey } from '../../reducers/Survey/surveyReducer.js';
 import surveyJSON from '../../data/survey_json.js';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
 StylesManager.applyTheme('modern');
 
 function onValueChanged(_, options) {
@@ -15,6 +17,7 @@ function onValueChanged(_, options) {
 
 export default function SurveyPage() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   //get user info
   const user = useSelector((state) => state.auth);
@@ -29,6 +32,7 @@ export default function SurveyPage() {
   function onComplete(survey) {
     // console.log('Survey complete! Results: ' + JSON.stringify(survey.data));
     dispatch(submitSurvey(survey.data));
+    navigate('/surveyCompleted');
   }
 
   const model = new Model(surveyJSON);

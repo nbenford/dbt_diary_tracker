@@ -1,6 +1,5 @@
 import React, { MouseEvent, useRef } from 'react';
 import { Container } from 'react-bootstrap';
-import { useSelector, useDispatch } from 'react-redux';
 import type { InteractionItem } from 'chart.js';
 import chartTrendline from 'chartjs-plugin-trendline';
 import {
@@ -22,7 +21,6 @@ import {
   Line,
   Bar,
 } from 'react-chartjs-2';
-import { faker } from '@faker-js/faker';
 
 ChartJS.register(
   LinearScale,
