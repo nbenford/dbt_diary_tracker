@@ -50,7 +50,7 @@ export default function UserTrends() {
           graphDataName={graphDataNames[index]}
         />
       ))}
-      <LineGraphAll surveys={surveys} />
+      {/* <LineGraphAll surveys={surveys} /> */}
     </div>
   );
 }
