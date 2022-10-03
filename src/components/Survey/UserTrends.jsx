@@ -42,7 +42,7 @@ export default function UserTrends() {
       <h1 className="d-flex mx-auto justify-content-center">
         {user.fName}'s DBT Diary Trends
       </h1>
-      {surveys.length > 0 ? (
+      {surveys.length > 1 ? (
         graphNames.map((graphName, index) => (
           <LineGraphs
             key={index}
@@ -54,9 +54,9 @@ export default function UserTrends() {
       ) : (
         <div className="d-flex flex-column mx-auto align-items-center justify-content-center">
           <hr />
-          <h2>You have not taken a survey yet.</h2>
+          <h2>You must have taken at least two surveys to see trends.</h2>
           <br />
-          <p>please take your first daily survey.</p>
+          <p>Please take a survey.</p>
         </div>
       )}
       {/* <LineGraphAll surveys={surveys} /> */}
