@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 //Toast defaults
 const defaultToast = {
   position: 'top-center',
-  autoClose: 600,
+  autoClose: 800,
   hideProgressBar: true,
   closeOnClick: true,
   pauseOnHover: true,
