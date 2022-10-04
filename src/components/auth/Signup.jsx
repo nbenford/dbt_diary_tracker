@@ -198,6 +198,7 @@ export default function Signup(props) {
                         onBlur={handleBlur}
                         value={values.username}
                         autoComplete="username"
+                        autoCapitalize="off"
                         className={
                           touched.username && errors.username ? 'error' : null
                         }
@@ -217,6 +218,7 @@ export default function Signup(props) {
                         onBlur={handleBlur}
                         value={values.password}
                         autoComplete="current-password"
+                        autoCapitalize="off"
                         className={
                           touched.password && errors.password ? 'error' : null
                         }
@@ -356,6 +358,7 @@ export default function Signup(props) {
                         name="email"
                         placeholder="email"
                         autoComplete="email"
+                        autoCapitalize="off"
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.email}
@@ -382,6 +385,7 @@ export default function Signup(props) {
                         onBlur={handleBlur}
                         value={values.username}
                         autoComplete="username"
+                        autoCapitalize="off"
                         className={
                           touched.username && errors.username ? 'error' : null
                         }
