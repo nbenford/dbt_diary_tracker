@@ -56,38 +56,40 @@ function App() {
   return (
     <div className="app">
       <Navigation />
-      <ToastContainer />
-      <Routes>
-        {/* <Route index element={<SurveyPage />} /> */}
-        <Route path={'/'} element={<SignIn />} />
-        <Route path={'/surveyPage'} element={<SurveyPage />} />
-        <Route path={'/signup'} element={<Signup />} />
-        <Route path={'/userTrends'} element={<UserTrends />} />
-        <Route path={'/surveyCompleted'} element={<SurveyCompleted />} />
-        <Route path={'*'} element={<PageNotFound />} />
-      </Routes>
-      <footer className="my-5 pt-5 text-muted text-center text-small">
-        <div className="githubIcon">
-          <a href={'https://github.com/nbenford'}>
-            <GitHubIcon />
-          </a>
-        </div>
-        <div className="copyright">
-          <p className="mb-1">&copy; 2022 DBT Tracker App Ltd.</p>
-          <ul className="list-inline">
-            <li className="list-inline-item">
-              <a href="#">Privacy</a>
-            </li>
-            <li className="list-inline-item">
-              <a href="#">Terms</a>
-            </li>
-            <li className="list-inline-item">
-              <a href="#">Support</a>
-            </li>
-          </ul>
-        </div>
-        <div></div>
-      </footer>
+      <main>
+        <ToastContainer />
+        <Routes>
+          {/* <Route index element={<SurveyPage />} /> */}
+          <Route path={'/'} element={<SignIn />} />
+          <Route path={'/surveyPage'} element={<SurveyPage />} />
+          <Route path={'/signup'} element={<Signup />} />
+          <Route path={'/userTrends'} element={<UserTrends />} />
+          <Route path={'/surveyCompleted'} element={<SurveyCompleted />} />
+          <Route path={'*'} element={<PageNotFound />} />
+        </Routes>
+        <footer className="my-5 pt-5 text-muted text-center text-small">
+          <div className="githubIcon">
+            <a href={'https://github.com/nbenford'}>
+              <GitHubIcon />
+            </a>
+          </div>
+          <div className="copyright">
+            <p className="mb-1">&copy; 2022 DBT Tracker App Ltd.</p>
+            <ul className="list-inline">
+              <li className="list-inline-item">
+                <a href="#">Privacy</a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#">Terms</a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#">Support</a>
+              </li>
+            </ul>
+          </div>
+          <div></div>
+        </footer>
+      </main>
     </div>
   );
 }

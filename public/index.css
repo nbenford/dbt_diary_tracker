@@ -17,14 +17,29 @@ body {
   font-size: 3rem;
 }
 
-.app {
-  position: absolute;
-  top: 83px;
-  width: 99vw;
+main {
+  /* position: absolute; */
+  padding-top: 85px;
+  /* width: 99.5vw; */
 }
 @media (max-width: 400px) {
-  .app {
-    top: 100px;
+  main {
+    top: 85px;
+  }
+}
+
+@media (max-width: 700px) {
+  .main_photo {
+    width: 60%;
+  }
+  .main_photo2 {
+    width: 55%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header_adaptive {
+    font-size: 1.3rem;
   }
 }
 

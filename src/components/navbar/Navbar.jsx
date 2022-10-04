@@ -43,6 +43,7 @@ export default function Navigation() {
   function handleLogout(e) {
     e.preventDefault();
     dispatch(logout());
+    setOpen(!isOpen);
     navigate('/');
   }
 
@@ -50,7 +51,13 @@ export default function Navigation() {
 
   return (
     <>
-      {showLog && <Signup show={showLog} onHide={handleCloseLog} />}
+      {showLog && (
+        <Signup
+          closeNav={() => setOpen(!isOpen)}
+          show={showLog}
+          onHide={handleCloseLog}
+        />
+      )}
       <Navbar
         expanded={isOpen}
         className="d-flex justify-content-between"
@@ -108,23 +115,25 @@ export default function Navigation() {
               )}
             </Nav>
             {/* Signed in as */}
-            <Nav>
+            <Nav className="mx-3">
               <Stack
                 direction="horizontal"
                 gap={3}
                 className="d-flex justify-content-end"
               >
-                <Navbar.Text className="d-flex align-items-center">
-                  Signed in as:{' '}
-                  <Nav.Link
-                    as={NavLink}
-                    to={`/`}
-                    onClick={() => setOpen(!isOpen)}
-                  >
-                    {username || 'guest'}{' '}
-                  </Nav.Link>
-                </Navbar.Text>
-                <div className="vr" />
+                {username && (
+                  <Navbar.Text className="d-flex align-items-center">
+                    Signed in as:{' '}
+                    <Nav.Link
+                      as={NavLink}
+                      to={`/`}
+                      onClick={() => setOpen(!isOpen)}
+                    >
+                      {username || 'guest'}{' '}
+                    </Nav.Link>
+                  </Navbar.Text>
+                )}
+
                 {/* signin / sign out */}
                 {!window.localStorage.getItem('isLoggedIn') && (
                   <Button variant="primary" size="sm" onClick={handleShowLog}>
@@ -132,9 +141,12 @@ export default function Navigation() {
                   </Button>
                 )}
                 {window.localStorage.getItem('isLoggedIn') && (
-                  <Button variant="info" size="sm" onClick={handleLogout}>
-                    Log Out
-                  </Button>
+                  <>
+                    <div className="vr" />
+                    <Button variant="info" size="sm" onClick={handleLogout}>
+                      Log Out
+                    </Button>
+                  </>
                 )}
               </Stack>
             </Nav>
